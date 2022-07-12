@@ -19,36 +19,37 @@
     <li><a href="/blog.html" data-title="Blog">Blog</a></li>
     </ul>
   </div>
-
   <div class="container">
 	<div>
-			<h1>Contact me</h1>
+			<h1 class="center">Contact me</h1>
 	</div>
 	<div>
-			<h4>Please contact me with any questions</h4>
+			<h4 class="center">Please contact me with any questions</h4>
 	</div>
-    <form onsubmit="sendEmail(); reset(); return false;">
+    <form action="https://formsubmit.co/danbutk@gmail.com" method="POST">
+      <input type="hidden" name="_next" value="https://nice-website.baneste.repl.co/thankyou.html">
+      <input type="hidden" name="_captcha" value="false">
       <div class="contact-container">
   			<div class="input-container">
   				<div class="styled-input">
-  					<input id="name" type="text" required />
+  					<input name = "name" id="name" type="text" required />
   					<label>Name</label> 
   				</div>
   			</div>
   			<div class="input-container">
   				<div class="styled-input">
-  					<input id="email" type="text" required />
+  					<input name ="email" id="email" type="email" required />
   					<label>Email</label> 
   				</div>
   			</div>
   			<div class="input-container">
   				<div class="styled-input">
-  					<textarea id="message" required></textarea>
+  					<textarea name = "message" type = "message"id="message" required></textarea>
   					<label>Message</label>
   				</div>
   			</div>
   			<div class="input-container">
-          <button class="submit-btn" onclick="sendContact();">Send </button>
+          <button class="submit-btn" type = "submit"">Send </button>
   			</div>
 	    </div>
     </form>
